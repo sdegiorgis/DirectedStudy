@@ -1,0 +1,34 @@
+Class notes 10-11
+
+l var if _merge ==1 //check merge results
+drop _merge //after merge to drop that new variable
+
+You can describe data you haven't loaded but have to be .dta files, not .csv:  describe using http......
+
+check which ones are nonunique:
+sort state //if state is the variable you want to see if it's unique
+count if state == state [_n-1]
+l if state == state [_n-1]
+
+after merging:
+l zip5 if _merge~=3
+drop _merge
+drop if _merge==2 //to drop the ones that didn't merge if you don't need them!
+
+collapse var, by (other var)
+preserve
+collapse var, by(other var)
+save varnewvar, replace
+restore //goes back to how it was before preserve
+
+Directory structure:  have a folder for raw data
+Stata can produce directory!
+Always have only one version of a dofile
+Also have the same chunk of code in one place - the parent
+You can have multiple do files (hierarchy) or put it all in one
+You can also have one master do file:  with a list of the do files with the command "do" in front of them
+
+Labeling is important!
+labels appear on output
+var name = variable name
+var lab describes label - use codebook to find them
