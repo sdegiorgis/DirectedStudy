@@ -19,3 +19,5 @@ help graph intro = code in stata to get graphical help
 https://www.stata.com/support/faqs/graphics/gph/stata-graphs/
 
 twoway tw
+
+continuous variables
